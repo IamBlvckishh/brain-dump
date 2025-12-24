@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRAIN DUMP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="main-header">
+            <div class="logo-area">
+                <h1>BRAIN DUMP</h1>
+                <div class="status-badge">LOCAL VAULT</div>
+            </div>
+            <div class="header-actions">
+                <button id="export-btn" class="utility-btn">💾 EXPORT .TXT</button>
+                <button id="privacy-btn" class="utility-btn">👁️ CLOAK</button>
+                <button id="add-note-btn" class="primary-btn">+ NEW THOUGHT</button>
+            </div>
+        </header>
+
+        <nav class="filter-section">
+            <span class="label">FILTER:</span>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">ALL</button>
+                <button class="filter-btn" data-filter="high">⚡ HIGH</button>
+                <button class="filter-btn" data-filter="med">⚖️ MED</button>
+                <button class="filter-btn" data-filter="low">🌱 LOW</button>
+            </div>
+        </nav>
+
+        <main id="tiles-grid" class="tiles-grid">
+            </main>
+    </div>
+
+    <div id="note-modal" class="modal hidden">
+        <div class="modal-card">
+            <div class="modal-head">
+                <h2>NEW CAPTURE</h2>
+                <button id="close-modal" class="close-btn">×</button>
+            </div>
+            <textarea id="note-text" placeholder="Dump your thought here..."></textarea>
+            <div class="modal-controls">
+                <select id="energy-level">
+                    <option value="high">HIGH ENERGY</option>
+                    <option value="med" selected>MEDIUM ENERGY</option>
+                    <option value="low">LOW ENERGY</option>
+                </select>
+                <button id="save-note" class="primary-btn">SAVE TO VAULT</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
